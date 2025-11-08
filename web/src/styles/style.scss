@@ -1,0 +1,16 @@
+@use "./components" as *;
+@use "./pages/login";
+
+* {
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Ariel, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+background: $color-deep-dark;
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
