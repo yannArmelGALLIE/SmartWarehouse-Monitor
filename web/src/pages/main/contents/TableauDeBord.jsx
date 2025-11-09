@@ -1,7 +1,9 @@
 const TableauDeBord = () => {
 
     return(
-        <div>Tableau de bord</div>
+        <div className="tableau-de-bord">
+            
+        </div>
     )
 }
 

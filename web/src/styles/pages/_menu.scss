@@ -5,9 +5,10 @@
   height: 100vh;
   padding: 20px;
   display: flex;
+  gap: 1rem;
 
   & > div:first-of-type {
-    width: 20%;
+    width: 15%;
     height: 95vh;
     display: flex;
     flex-direction: column;
@@ -41,7 +42,7 @@
         width: 100%;
         padding: 10px;
         border-radius: 10px;
-                  transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         & > a {
           color: $white;
           display: flex;
@@ -50,7 +51,7 @@
         }
 
         &:hover {
-            background-color: $glass-bg;
+          background-color: $glass-bg;
         }
 
         &.active {
@@ -63,4 +64,168 @@
       }
     }
   }
+
+  & > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+
+    & > div:first-of-type {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      & > div:nth-of-type(2) {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+     
+        & > div:nth-of-type(2) {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          border-radius: 12px;
+          padding: 10px;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.28)
+          );
+          box-shadow: 0 6px 18px rgba(20, 15, 25, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.03);
+
+          & > p {
+            padding-left: 20px;
+            font-weight: bold;
+          }
+
+          & > div:first-of-type {
+            background-color: rgba($color-accent, 0.18);
+            width: 100%;
+            height: 2px;
+            margin: 5px 0px;
+          }
+
+          & > div:nth-of-type(2) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            & > div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+          }
+        }
+      }
+
+      & > div:nth-of-type(3) {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        & > button {
+          width: 100%;
+          display: flex;
+          padding: 10px;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 20px;
+          cursor: pointer;
+          border: none;
+          background: linear-gradient(
+            90deg,
+            $color-accent,
+            darken($color-accent, 6%)
+          );
+          color: $white;
+          font-weight: 600;
+          cursor: pointer;
+          box-shadow: 0 8px 24px rgba($color-accent, 0.18),
+            inset 0 -2px rgba(0, 0, 0, 0.12);
+          transition: transform 0.18s ease, box-shadow 0.18s ease;
+          &:hover {
+            transform: translateY(-2px);
+          }
+
+          & > div:first-of-type {
+            width: 40px;
+            height: 40px;
+
+            & > img {
+              width: 100%;
+              border-radius: 50px;
+            }
+          }
+
+          & > div:nth-of-type(2) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            & > p:first-of-type {
+              font-weight: 600;
+            }
+          }
+        }
+
+        & > div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          border-radius: 12px;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.28)
+          );
+          box-shadow: 0 6px 18px rgba(20, 15, 25, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.03);
+
+          & > a {
+            color: $white;
+            text-decoration: none;
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 10px;
+
+            &:first-of-type {
+              border-radius: 12px 12px 0px 0px;
+
+              &:hover {
+                background: linear-gradient(
+                  180deg,
+                  rgba(0, 0, 0, 0.22),
+                  rgba(0, 0, 0, 0.28)
+                );
+              }
+            }
+
+            &:nth-of-type(2) {
+              border-radius: 0px 0px 12px 12px;
+
+              &:hover {
+                background: linear-gradient(
+                  180deg,
+                  rgba(0, 0, 0, 0.22),
+                  rgba(0, 0, 0, 0.28)
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
 }
