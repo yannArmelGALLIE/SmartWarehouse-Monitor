@@ -1,0 +1,66 @@
+@use "../components" as *;
+
+.menu {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+
+  & > div:first-of-type {
+    width: 20%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.28)
+    );
+    box-shadow: 0 6px 18px rgba(20, 15, 25, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+
+    & > div:first-of-type {
+      width: 70%;
+
+      & > img {
+        width: 100%;
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+
+      & > div {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+                  transition: all 0.3s ease-in-out;
+        & > a {
+          color: $white;
+          display: flex;
+          gap: 20px;
+          text-decoration: none;
+        }
+
+        &:hover {
+            background-color: $glass-bg;
+        }
+
+        &.active {
+          background: $white;
+
+          & > a {
+            color: $color-dark-purple;
+          }
+        }
+      }
+    }
+  }
+}

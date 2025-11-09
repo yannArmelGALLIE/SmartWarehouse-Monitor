@@ -188,3 +188,11 @@
     }
   }
 }
+
+.error {
+  @include alertStyle($error, 50%);
+}
+
+.warning {
+  @include alertStyle($warning, 95%);
+}
