@@ -1,0 +1,130 @@
+@use "../components" as *;
+
+.tableau-de-bord {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & > div:first-of-type {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+
+        & > div {
+            border-radius: 12px;
+          padding: 20px;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.28)
+          );
+          box-shadow: 0 6px 18px rgba(20, 15, 25, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.03);
+
+          & > div:first-of-type {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & > div {
+                padding: 5px;
+                border-radius: 10px;
+                background-color: lighten($color: $color-dark-purple, $amount: 30%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            & > p {
+                display: flex;
+                align-items: center;
+            }
+          }
+
+          & > div:nth-of-type(2) {
+            display: flex;
+            margin-top: 10px;
+            flex-direction: column;
+            gap: 10px;
+
+            & > p:nth-of-type(2) {
+
+                & > span {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+            }
+          }
+        }
+    }
+
+    & > div:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        & > div:first-of-type {
+             border-radius: 12px;
+          padding: 20px;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.28)
+          );
+          box-shadow: 0 6px 18px rgba(20, 15, 25, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.03);
+
+          & > div:first-of-type {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            & > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 30px;
+
+                & > div:first-of-type {
+                    display: flex;
+                    gap: 20px;
+                    width: 70%;
+
+                    & > div:first-of-type {
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                         border-radius: 5px;
+                background-color: lighten($color: $color-dark-purple, $amount: 30%);
+                    }
+
+                    & > div:nth-of-type(2) {
+                        flex: 1;
+
+                        & > div {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
+                & > div:nth-of-type(2) {
+                    flex: 1;
+                    padding: 5px;
+                    border-radius: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                }
+            }
+          }
+        }
+    }
+}

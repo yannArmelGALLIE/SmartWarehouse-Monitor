@@ -1,6 +1,7 @@
 @use "./components" as *;
 @use "./pages/login";
 @use "./pages/menu";
+@use "./pages/tableau-de-bord";
 
 * {
   font-family: "Inter", "Segoe UI", Roboto, Helvetica, Ariel, sans-serif;
