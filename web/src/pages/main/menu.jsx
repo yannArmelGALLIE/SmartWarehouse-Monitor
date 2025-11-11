@@ -23,6 +23,7 @@ const Menu = () => {
   const [activePage, setActivePage] = useState("tableau-de-bord");
   const [visible, setVisible] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [user, setUser] = useState(null);
 
   const menuItems = [
     {
@@ -57,7 +58,21 @@ const Menu = () => {
 
   const showNotifications = () => {
     setIsVisible(!isVisible);
-  }
+  };
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const token = localStorage.getItem("token");
+      const res = await fetch("http://localhost:8080/api/user", {
+        headers: { "Authorization": `Bearer ${token}` }
+      });
+      const data = await res.json();
+      console.log(data);
+      setUser(data);
+    };
+
+    fetchUser();
+  }, [])
 
   return (
     <div className="menu">
@@ -133,8 +148,8 @@ const Menu = () => {
                 <img src={profil} />
               </div>
               <div>
-                <p>GALLIE Koffi Yann-Armel</p>
-                <p>Administrateur</p>
+                {user && <p>{user.name}</p>}
+                {user && user.role === "admin" ? <p>Administrateur</p> : <p>{user.role}</p>}
               </div>
               <div>
                 <KeyboardArrowDownIcon />

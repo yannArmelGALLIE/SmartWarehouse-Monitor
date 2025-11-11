@@ -190,7 +190,7 @@
 }
 
 .error {
-  @include alertStyle($error, 50%);
+  @include alertStyle($error, 110%);
 }
 
 .warning {
